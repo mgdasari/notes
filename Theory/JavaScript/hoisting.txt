@@ -1,0 +1,36 @@
+Hoisting:
+---------
+>>
+
+1) Hoisting is the default behaviour of the Javascript where all the variable and function declaration are moved at the top of the code.
+
+It basically refers to the process in which variable and function declaration are allocated a memory prior to the execution of the code.
+
+2) Declaration made using var are initialized as undefined and dunction declared as regualar function are initialized with function only.
+
+3) let and const are hoisted but not as var.It is hoisted in temporal dead zone.
+
+Temporal Dead Zone:
+--------------------
+1) 
+
+example:
+--------
+
+1)  variable Hoisting
+---------------------------
+
+console.log(a); //undefined
+    a=1;
+    var a;
+
+2) Regular function Hoisting:
+------------------------------
+
+hoisted() //hoisted function
+
+function hoisted(){
+    console.log('hoisted function');
+}
+
+3) 

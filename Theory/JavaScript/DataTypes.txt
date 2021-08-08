@@ -1,0 +1,87 @@
+Q) Different Types of Data type in Javascript:
+----------------------------------------------
+>>
+There are mainly 2 type of Data Type in Javascript.
+
+1) Primitive 2) Non Primitive
+
+1) Primitive Data Type:
+-------------------------
+
+a) Primitive Data type can store only single type of value. It means that if you assign string/number/boolean/null/undefined to any variable. It will remain that value only you can't change it.
+
+example:
+---------
+
+you can't do like this var x ='mukund'1234. If you assign string then it will be string.
+
+b) Below are the Primitive Data type
+
+    1) string
+    2) number
+    3) boolean
+    4) null
+    5) undefined
+
+c) Primitive Data type are immutable.You can not change there value.
+
+var x='mukund';
+var y=x;
+
+var y='dasari'
+console.log(x); //mukund
+console.log(y); //dasari
+
+d) This show that Primitive Data type are stored at different location.And there value can not be changed.
+
+2) Non Primitive Data Type:
+--------------------------------
+
+a) Non Primitive data type are used to store complex and multiple values.
+b) Below are the non Primitive data type:
+--------------------------------------------
+1) Array
+2) objects
+
+This can store multiple type values in it example.
+
+var obj1 = {
+   x:  43,
+   y:  "Hello world!",
+   z: function(){
+      return this.x;
+   }
+}
+      
+// Collection of data as an ordered list
+      
+var array1 = [5, "Hello", true, 4.1];  
+
+c) Non Primitive data type are mutable. You can change there values.
+
+var obj1 = {
+   x:  43,
+   y:  "Hello world!",
+   z: function(){
+      return this.x;
+   }
+}
+
+var obj2 = obj1;
+
+console.log(obj1);
+console.log(obj2);
+
+obj2.x=100
+console.log(obj1.x); //100
+console.log(obj2.x); //100
+
+d) This show that both the object reffer to same memory location as it is non Primitive data type.
+
+
+refference: dataType.js
+
+
+
+
+

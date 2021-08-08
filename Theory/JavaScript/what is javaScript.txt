@@ -1,0 +1,71 @@
+Q) What is Javascript?
+
+>>
+1) It is a programming laganguage.
+2) It is used for client and server side application developement.
+3) Javascript is single threaded laganguage and it is synchronous(Execute line by line and wait till current task is finsihed).
+4) We have Javascript as a standard, implemented as engine by different company like V8 engine,spidermonkey,
+etc. These engine basically convert javascript code into machine code.
+
+
+Q) how do we get asynchronous code with Javascript then?
+
+>>
+1) Javascript engine have web api that handles the task in background.
+2) THe call stack recognize the function of web api and hands them off to be handle by browser.
+Once this task are finsihed they return and are pushed onto the callstack as callback.
+
+
+
+Example:
+-------
+console.log("first")
+setTimeout(() => {
+    console.log("second")
+}, 1000)
+console.log("third")
+
+Explanation:
+------------
+
+1) When you run the above code. 
+2) First Initialization happens.
+3) Secondly the execution happens.
+
+In these,
+1) A callstack is formed and each line is executed in that.
+2) Here line22 will be executed.
+3) Then set timeout webapi is called and execution moves to line 26.
+4) Once the time is over i.e 1000 then event loop checks the main stack is empty or not.Once all the line is executed.
+The event loop push the callback to main stack and that is code is executed.
+
+So output of the above is code is as follow:
+---------------------------------------------
+
+first
+third
+second
+
+
+
+Reffer Screenshot for eventloop in javascript which is different the node.js.
+-----------------------------------------------------------------------------
+
+Javascript:
+---------------
+
+https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif
+
+
+Node.js:
+---------
+
+https://witkesam.medium.com/solving-the-blocked-event-loop-in-node-js-abb6cac281a7
+
+Note:
+------
+
+1) In node.js we have libuv library because of which it help node.js to achieve asynchronality while in javascript its web api which help it to achieve asynchronality.
+
+For basic javascript code please reffer /practical/basic javascript code.html
+
