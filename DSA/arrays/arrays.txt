@@ -1,0 +1,17 @@
+Arrays:
+----------
+
+1) Its is objects in javascripts.
+2) It is non primitive type of data.
+3) 8 must know javascripts arrays methods.
+
+please reffere arrays.js file for it.
+
+array.filter
+array.map
+array.find
+array.some
+array.every
+array.foreach
+array.includes
+array.reduce

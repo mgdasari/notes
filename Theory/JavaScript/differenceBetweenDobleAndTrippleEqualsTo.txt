@@ -1,0 +1,20 @@
+Q) Difference between == and === ?
+-----------------------------------
+
+Both are comparision operator.
+
+== is use to check the values.
+=== is ued to check the values and types.
+
+Example:
+----------
+let x=0;
+let y= false
+console.log(x==y); //true
+console.log(x===y); //false
+
+let a= 1;
+let b='1'
+
+console.log(a==b);//true
+console.log(a===b);//false

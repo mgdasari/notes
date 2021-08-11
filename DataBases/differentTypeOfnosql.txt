@@ -1,0 +1,28 @@
+There are 4 different type of nosql data bases:
+------------------------------------------------
+
+1) Key value store:
+----------------------
+
+amzone s3, redis
+
+2) Column based store :
+------------------------
+
+It has data from only one column like cassandra and Hbase.
+
+3) Document base stores:
+-------------------------
+
+It stores data in terms of documents like mongodb and couchdb
+
+4) Graph based store :
+--------------------------
+
+neo4j
+
+
+For difference between the databases please refere below vedio:
+------------------------------------------------------------------
+
+https://www.youtube.com/watch?v=QlqylUeqeis

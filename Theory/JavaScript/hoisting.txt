@@ -6,13 +6,15 @@ Hoisting:
 
 It basically refers to the process in which variable and function declaration are allocated a memory prior to the execution of the code.
 
-2) Declaration made using var are initialized as undefined and dunction declared as regualar function are initialized with function only.
+2) Declaration made using var are initialized as undefined and function declared as regualar function are initialized with function only.
 
 3) let and const are hoisted but not as var.It is hoisted in temporal dead zone.
 
 Temporal Dead Zone:
 --------------------
-1) 
+1) Temporal Dead zone is time between memory allocation and variable declaration. If you try to access the variable in these zone then you will get refference error.
+2) Basically if you try to access the variable before declaration, It will give you a refference error.
+
 
 example:
 --------
@@ -24,8 +26,8 @@ console.log(a); //undefined
     a=1;
     var a;
 
-2) Regular function Hoisting:
-------------------------------
+2) Regular function/function declaration Hoisting:
+-----------------------------------------------------
 
 hoisted() //hoisted function
 
@@ -33,4 +35,22 @@ function hoisted(){
     console.log('hoisted function');
 }
 
-3) 
+3) Let and const are hoisted in temporal dead zone
+-----------------------------------------------------
+let a;
+console.log(a); //If you try to access before declaration it will give u refference error
+
+4) function expression do not hoisted:
+-------------------------------------------
+
+get();
+var get = function(){
+    console.log('mukund');
+} //As function are not hoisted it will throw an error.
+
+
+How to Avoid Hoisting:
+-----------------------
+
+1) Use let and const instead of var
+2) Use function expression instead of declaration.

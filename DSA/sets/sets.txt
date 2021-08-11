@@ -1,0 +1,64 @@
+sets store unique value in to it.
+
+usage of set :
+----------------
+
+1)  It help to remove all the duplicate value in array.
+
+example:
+---------
+const arry = [1,2,34,4,5,2,1];
+const sets = new Set(arry);
+
+console.log(arry); //[ 1, 2, 34, 4, 5, 2, 1 ]
+console.log(sets); //Set { 1, 2, 34, 4, 5 }  It removes the duplicate elements
+
+2) you can convert set to array which contain unique values.
+----------------------------------------------------------------
+const newSets = [...sets]
+
+console.log(newSets) //[ 1, 2, 34, 4, 5 ]
+
+3) Adding to sets:
+------------------
+sets.add(6);
+sets.add('7');
+console.log(sets);
+
+4) Deleting from sets:
+---------------------------
+
+sets.delete(34);
+console.log(sets); //Set { 1, 2, 4, 5, 6, '7' }
+
+5) clear method:
+------------
+
+sets.clear() 
+console.log(sets);//Set {}
+
+6) has method:
+------------------
+
+console.log(sets.has(4)); //It return boolean values.
+
+7) size method:
+---------------
+
+it give the size of the sets.
+
+***) Difference between arrays and sets:
+------------------------------------------
+
+Arrays:
+---------
+
+1) It is order list . you can acces the element using index 
+2) when duplicacy dosenot matter and we need order list then we use array
+
+
+sets:
+-----
+
+1) It is unorder list. You can not access the element using index
+2) when we dont want duplicate element and unoderlist then we go for sets.

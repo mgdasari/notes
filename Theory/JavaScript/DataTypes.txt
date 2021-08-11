@@ -32,7 +32,7 @@ var y='dasari'
 console.log(x); //mukund
 console.log(y); //dasari
 
-d) This show that Primitive Data type are stored at different location.And there value can not be changed.
+d) This show that Primitive Data type are stored at different location/Passed-by-Value.And there value can not be changed.
 
 2) Non Primitive Data Type:
 --------------------------------
@@ -76,7 +76,7 @@ obj2.x=100
 console.log(obj1.x); //100
 console.log(obj2.x); //100
 
-d) This show that both the object reffer to same memory location as it is non Primitive data type.
+d) This show that both the object reffer to same memory location as it is non Primitive data type.Non Primitive data type are Pass-by-refference.
 
 
 refference: dataType.js

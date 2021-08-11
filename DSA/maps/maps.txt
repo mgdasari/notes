@@ -1,0 +1,53 @@
+Maps:
+------
+
+1) The plain object holds key value data.But the plain object has a limitation.Its keys have to be strings.
+
+what happens if use numbers as a keys.
+-----------------------------------------
+
+const name={
+    1:'name',
+    2:'mukund'
+}
+
+console.log(Object.keys(name))  //[ '1', '2' ]
+
+In these keys has to be number but when u print it is strings.
+
+Here the MAP cames into pictures.
+------------------------------------
+
+you can store key as number,string,boolean in Maps.
+
+**) Set the maps:
+-------------------
+const mymap = new Map ;
+mymap.set(1,'mukund');
+mymap.set([1,2,3],'dasari');
+console.log(mymap)   //Map { 1 => 'mukund', [ 1, 2, 3 ] => 'dasari' }
+
+***) For of loop gives key first and values afterwards:
+---------------------------------------------------------
+for (const [key,values] of mymap) {
+
+    console.log('key is ' + key +' values is ' + values);
+}
+
+//key is 1 values is mukund
+key is 1,2,3 values is dasari
+
+
+***) Foreach gives values first and key afterwards:
+------------------------------------------------------
+
+mymap.forEach((values,key)=>{
+    console.log('values ' + values);
+    console.log('keys ' + key);
+});
+
+//
+values mukund
+keys 1
+values dasari
+keys 1,2,3

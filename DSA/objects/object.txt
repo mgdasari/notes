@@ -1,0 +1,56 @@
+Objects:
+-----------
+
+Objects are basically like real life Objects like phone they have properties (key value pair) and methods.
+
+Phone:
+
+It has properties like colour,size,model
+It can also perform functionality like ring,take a pic,play a music
+
+Example:
+----------
+let phone ={
+    colour:'blue',
+    size:123,
+    model:'s6',
+    TakeApic(){},
+    ring(){}
+}
+
+Object literals:
+----------------
+
+By curlly braces you can define a object using object literals.
+
+let obj = {
+    name:'crystal',
+    age:30,
+    blogs:['why mac and cheese rule','10 things to make marite']
+}
+
+
+**) Way to access the object.
+------------------------------
+
+console.log(obj.name); //crystal
+console.log(obj['name']); //crystal
+console.log(obj['age']); //age
+
+****) Adding methods to objects:
+------------------------------------
+let obj = {
+    name:'crystal',
+    age:30,
+    blogs:['why mac and cheese rule','10 things to make marite'],
+    login(){
+        console.log('user logged in ');
+    },
+    logout(){
+        console.log('user logged out')
+    }
+
+}
+
+obj.login();
+obj.logout();

@@ -1,0 +1,38 @@
+Coercion:
+-----------
+
+1) Coercion is automatic conversion of values from one to other data type.
+2) It happens when operands of the expression have values of different data type.
+
+
+Example:
+---------
+
+1) 
+
+var x= 3;
+var y='4';
+
+var z= x+y //34 this is Coercion and final data type is string.
+
+2) 
+
+var x=7;
+var y ='hello' 
+var z= x+y //'7hello'
+
+Note:
+------
+In case of - operator. The string is converted to number and substraction happens.
+
+3) var x= 9;
+var y = '5';
+var z = x-y //4
+
+
+4) var x =4;
+var y ='hello';
+
+var z = x-y;
+
+console.log(z); //NAN this not a number

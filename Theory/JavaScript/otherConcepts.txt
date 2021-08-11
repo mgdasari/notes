@@ -1,0 +1,23 @@
+Q) Is javascript a statically typed or a dynamically typed language?
+----------------------------------------------------------------------
+
+1) Javascript is dynamically typed language. As typeof the variable are checked during run time while in statically type the type of the variable are check during compile time.
+
+Q) What is NaN property in JavaScript?
+-------------------------------------------
+
+>> NaN represent Not a Number.
+
+Example:
+-----
+
+let a =123;
+let b = 'hello';
+let c = a+b //nan 
+
+Q) Immediate Invoke Function:
+-----------------------------------
+
+Immediate Invoke function are the function which is called as soon as it is defined.
+
+(function(){//do something})()

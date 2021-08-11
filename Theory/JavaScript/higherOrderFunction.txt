@@ -1,0 +1,29 @@
+Higher Order Function:
+--------------------------
+
+Higher Order Function are the function which can take function as a argument and which can return a function are called Higher Order Function.
+
+Example:
+----------
+1) Taking function as a argument:
+--------------------------------------
+
+function higherOrder(fn){
+    fn()
+}
+
+function print(){console.log('heloo there')}
+
+higherOrder(print);
+
+2) Returning function:
+-------------------------
+
+
+function x(){
+    return function (x){
+        console.log(x)
+    }
+}
+
+x()('hello there i am inside function')

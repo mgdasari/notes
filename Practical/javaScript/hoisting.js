@@ -8,7 +8,7 @@ console.log(a); //undefined.
 
 
 /**
- * regular function hoisting
+ * regular function/function declaration hoisting.
  */
 
 hoisted()
@@ -21,5 +21,16 @@ function hoisted(){
  * let and const hoisting
  */
 
-console.log(x)
-var x=10;
+let x;
+console.log(x);
+
+/**
+ * function expression.
+ * 
+ * In function expression. Function is not hoisted as like function declartion.
+ */
+
+get();
+var get = function(){
+    console.log('mukund');
+}

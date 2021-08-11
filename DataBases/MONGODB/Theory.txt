@@ -1,0 +1,28 @@
+Q) What is difference between RDBMS and No-sql?
+------------------------------------------------
+
+RDBMS:
+------
+1) It is a relational database management system.
+2) It has pre defined schema.
+3) It is used when you have structed data.
+4) It is table based database.
+
+
+NoSQL:
+------
+
+1) It is a non relational database.
+2) It does not have pre defined schema.
+3) It is used for both structed(cassandra) and unstructed(monodb) data.
+4) It is document oriented database.
+
+Q) Different type of NoSQL database?
+------------------------------------------
+>>
+1) key value based ---redis
+2) document based --mongodb
+3) graph based --graphql
+4) column based --cassandra
+
+Q) 

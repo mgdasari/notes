@@ -1,0 +1,59 @@
+Which to choose RDBMS OR NoSQL:
+--------------------------------
+
+It all depend on the requirement.
+
+RDBMS:
+---------
+
+1) Suppose your project have fixed schema, have limited data count, required ACID Property then you should go for MYSQL.
+
+2) In mysql you can not do horizontal scaling. Vertical scaling only possible which means you have to increase a resource capacity.
+
+Not like nosql you can have multi site architechure.
+
+LIKE BANKING systems. In thses you have fixed schema, not million user, you acid property so MYSQL is used.
+
+NoSQL:
+------
+1) Suppose YOU have a system where schema is dynamic chaning and you have to support huge data. But you dont have major concern for ACID propert.
+
+As you have to support huge data then you may require multi site set up.
+
+2) In these you go for NoSQL.
+
+Example e-commerce the schema varies for each product.
+
+
+ACID propert:
+--------------
+
+How to handle one transaction is governed by acid property
+
+Atomic
+correctness
+Isolation
+Durability 
+
+ACID is property/feature impelemented and followed by RDBMS by itself you dont have to do extra things for it.
+
+-------------------------------------------------------------------------
+
+#########################################################################
+
+NoSQL:
+-------
+
+1) NoSQL means not only sql which means its alternative to rdbms which does not require fixed schema.
+
+2) It majorly scale horizontally and major operation on data.
+
+3) nosql data base can also be used for storing structured data and can work as rdbms. To be specific functionality like mysql is subset of NoSQL.
+
+Need of NoSQL data BASE:
+----------------------------
+
+1) Provide more Scalibility 
+2) Perform superiror performance.
+3) schema less data model.
+4) nosql per node give high performance then rdbms nodes.
