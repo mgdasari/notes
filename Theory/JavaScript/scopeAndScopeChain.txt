@@ -1,0 +1,99 @@
+What is scope?
+--------------
+
+1) scope in js determine the accessibilty of variable and function at various parts in one's code.
+
+There are 3 type of scope:
+---------------------------
+1) Global
+2) local or function scope
+3) blocked
+
+**)Global scope:
+------------------
+variable and function defined in global scope can be accessed from anywhere inside the code.
+
+example:
+-------
+var globalVariable = "Hello world";
+
+function sendMessage(){
+  return globalVariable; // can access globalVariable since it's written in global space
+}
+
+function sendMessage2(){
+  return sendMessage(); // Can access sendMessage function since it's written in global space
+}
+
+console.log(sendMessage2()); 
+
+**) function scope:
+------------------------
+
+Any variable and function defined inside the function have local scope or functional scope.which means that variable and function defined inside the function can be accessed inside the function but not from outside the function.
+
+example:
+---------
+
+ function awesomeFunction(){
+    var a = 2;
+  
+    var multiplyBy2 = function(){
+      console.log(a*2); // Can access variable "a" since a and multiplyBy2 both are written inside the same function
+    }
+    multiplyBy2(2)
+  }
+
+  awesomeFunction();//4
+
+  console.log(a); // Throws reference error since a is written in local scope and cannot be accessed outside
+  
+  multiplyBy2(); // Throws reference error since multiplyBy2 is written in local scope
+
+  
+  **) blocked scope:
+  ------------------
+  blocked scope related to variable declared with let and const.variable not declared as var do not have blocked scope.
+
+  blocked scope tell us that any varibale declared inside any block can be accessed inside that block {} only.
+
+  {
+    let x = 45;
+  }
+  
+  console.log(x); // Gives reference error since x cannot be accessed outside of the block
+  
+  for(let i=0; i<2; i++){
+    // do something
+  }
+
+  ***)scope chaining:
+  --------------------
+
+  Javascript engine uses scope to finc variable.suppose engine dose not find varibale in the particular scope it will search outside the scope and go uptill global scope and then throw the refference error.
+
+example:
+---------
+  var y = 24;
+
+   function favFunction(){
+     var x = 667;
+     var anotherFavFunction = function(){
+       console.log(x); // Does not find x inside anotherFavFunction, so looks for variable inside favFunction, outputs 667
+     }
+   
+     var yetAnotherFavFunction = function(){
+       console.log(y); // Does not find y inside yetAnotherFavFunction, so looks for variable inside favFunction and does not find it, so looks for variable in global scope, finds it and outputs 24
+     }
+
+     var yetYetAnotherFavFunction = function(){
+         console.log(z); //It search for scope uptill global scope and throw the refference error.
+     }
+   
+     anotherFavFunction();
+     yetAnotherFavFunction();
+     yetYetAnotherFavFunction();
+   }
+   
+   
+   favFunction();

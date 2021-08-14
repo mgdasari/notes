@@ -1,0 +1,13 @@
+what is currying?
+------------------
+
+1) currying is a advance technology which transform function of n argument into n function of one or less argument.
+
+For Example, if we have a function f(a,b), then the function after currying, will be transformed to f(a)(b).
+
+2) By using the currying technique, we do not change the functionality of a function, we just change the way it is invoked.
+
+
+
+
+

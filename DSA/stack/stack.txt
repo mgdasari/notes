@@ -1,0 +1,15 @@
+What is stack ?
+-------------------
+
+>> As name suggest stack it behave like real worl stack. example 1) Deck of cards 2) pile of plates etc
+
+A real world stack allows operation at one end only. we can add or remove plates from the top of the stacks.
+
+This feature make it LIFO---> Last in first out.
+
+Operation It support:
+----------------------
+1) PUSH -- Storing element in stacks
+2) POP -- Removing element from stack
+3) PEEK -- It displays first element on stack
+4) LENGHT -- It give lenght of stack

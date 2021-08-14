@@ -21,3 +21,40 @@ Q) Immediate Invoke Function:
 Immediate Invoke function are the function which is called as soon as it is defined.
 
 (function(){//do something})()
+
+Q) this:
+----------
+
+this refferes to the object that the function is property of. [function jo object mein defined hua hn this keyword wo  object ko reffer karta hn].
+
+The value of this defend upon the object which is invovking the function.
+
+example:
+-------
+1)
+function display(){
+    console.log(this) // Here Display function is called y global object so in console we get global object.
+}
+
+display()
+2) 
+let user ={
+    name:'mukund',
+    getUserdetails(){
+        console.log(this); //Here the function is called by the object user so it console user object
+    }
+}
+
+
+user.getUserdetails();
+3) 
+var obj1 = {
+    address : "Mumbai,India",
+    getAddress: function(){
+    console.log(this.address); 
+  }
+}
+       
+var getAddress = obj1.getAddress;
+var obj2 = {name:"akshay"};
+obj2.getAddress(); //here we will get error as ob2 dose not  have address attribute
