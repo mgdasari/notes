@@ -1,0 +1,6 @@
+token:    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
+
+steps to generate token:
+------------------------
+
+https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to
