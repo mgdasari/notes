@@ -25,4 +25,135 @@ Q) Different type of NoSQL database?
 3) graph based --graphql
 4) column based --cassandra
 
-Q) 
+Q) what is mongodb?
+>> mongodb is document oriented database.It store data in BSON formate.It provide high scalibility, availibility and performance
+
+Q) What is mongod?
+>>mongod is used to start a mongo db database.
+
+Q) what is mongo?
+>>mongo is used to connect to mongod. You can also use python javascript to connect to mongodb.
+
+Q) Why/ Advantages of mongodb?
+
+>>
+1) It is document oriented database.
+2) You can apply indexes on multiple flieds.
+3) It is schema less
+4) Auto sharding is available.
+5) Replication is available due to which it provide high availibility
+
+Q) Data modeling in mongodb?
+
+>> There is 2 type of model in mongodb.
+1) Normalized
+2) DeNormalized
+
+1) Normalized:
+---------------
+a) In these subdocument is mentioned in main document by refferences.
+
+where to use Normalized Data model:
+-----------------------------------
+a) If you want less redundant data so that memory can be used efficiently.Then go for mongodb.
+b) If your application insert update and delete operation more then read then Normalized is better option.
+
+Example:
+-----------
+Employee (main document):
+--------------------------
+
+{_id:<objid101>,
+EmpId: "10025AE336"
+}
+
+personal (subdocument):
+--------------------------
+
+{
+    _id:<objid102>,
+    empDocId:"objid101",
+    FirstName:"Radhika",
+    Lastname:"sharma"
+
+}
+
+contacts(subdocument):
+-----------------------
+{
+    _id:<objid103>,
+    empDocId:"objid101",
+    number:7021829703
+}
+
+2) Denormalized:
+-----------------
+
+a) In these all teh subdocument are mentioned in the main document.
+
+where to use Denormalized Data model:
+-----------------------------------
+1) If you have read operation much more than insert/update/delete then go for Denormalized.
+2) Having redundant and memory efficiency is not major concern.
+
+Example:
+----------
+{
+	_id: ,
+	Emp_ID: "10025AE336"
+	Personal_details:{
+		First_Name: "Radhika",
+		Last_Name: "Sharma",
+		Date_Of_Birth: "1995-09-26"
+	},
+	Contact: {
+		e-mail: "radhika_sharma.123@gmail.com",
+		phone: "9848022338"
+	},
+	Address: {
+		city: "Hyderabad",
+		Area: "Madapur",
+		State: "Telangana"
+	}
+}
+
+
+Q) Projections:
+----------------
+1) If suppose in document there are many document but you want few fields in output. Then Projections are used.
+
+Query:
+------
+
+db.collectionName.find({},{field1:1,field2:1,field3:3})
+
+It will display the result with field1 field2 field3
+
+Q) Pretty():
+------------
+It use to formate the output data .
+
+Query:
+------
+
+db.collectionName.find().pretty()
+
+Q) LIMIT():
+-----------
+LIMIT function is same as limit in sql.
+
+Query:
+-----
+
+db.collectionName.find().limit(5);
+
+select * from tableName limit 5;
+
+Q) Aggregation:
+-----------------
+
+1) In Aggregation we basically group the document and perform mathematical operation on it.
+2) Aggregate operation like average,min,max,count
+3) It has pipeline concept attach to it.
+
+pipeline=[{{$match:{}},{$group:{}},{$project:{}}}]

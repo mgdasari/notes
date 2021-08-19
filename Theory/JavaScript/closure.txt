@@ -1,0 +1,92 @@
+What is closure ?
+-----------------
+
+1) closure is an ability of a function to remember the variable and function that are declared in its out scope.
+2) whenever a function is created a closure is also created.
+
+3)Javascript has a lexical scope.
+4) lexical scoping means that variable defined outside scope are automatically available inside the scope.which means you dont need to pass teh variable explicitly.
+
+
+Example:
+-----------
+1)
+
+/**
+ *Lexical scoping is explained below. The variable defined outside scope are available inside the scope.You dont have to pass explicilty. 
+ */
+
+let i = 2;
+
+const test = () =>{
+    console.log(i);  //2
+}
+
+test()
+
+
+2)
+/**
+ * Let understand how child function can access the variable and argument of the outer function.
+ */
+
+function outerFunction(b){
+    let x=10;
+    function innerFunction(){
+        console.log(x);   //10
+        console.log(b);    //5
+    }
+    return innerFunction;
+}
+
+outerFunction(5)();
+
+3) 
+/**
+ * childfunction can access the variable defined in outer scope even when outer funtion is executed completly.
+ */
+
+function outerFunction1(){
+    let parentVariable = 1000;
+    function childfunction1(){
+        console.log(parentVariable);
+    }
+    return childfunction1
+}
+
+let executable = outerFunction1();
+/**
+ * Here outer funtion is executed and return child function.And child function still access the outer variable.This called closure.
+ */
+executable()
+
+NOTE:
+------
+
+1) CLosure keep the state of the outer variable between the multiple call.Innr function dose not contain separate copy it just keep the refference of the outer variable.
+
+function ParentFunction() {
+
+    var parentVariable = 60;
+
+    function ChildFunction() {
+        return parentVariable += 1;
+    }
+
+    return ChildFunction;
+}
+
+var executeChild = ParentFunction();
+console.log(executeChild()); //61
+console.log(executeChild()); //62
+console.log(executeChild()); //63
+console.log(executeChild()); //64
+
+
+**)when to use closure?
+------------------------
+
+If you want in your project few implementation should be hided.
+closure can be useful in creating private variable and function
+
+https://deepakmankotia.medium.com/what-is-closures-in-javascript-7acc626281ab
