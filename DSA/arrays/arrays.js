@@ -113,3 +113,23 @@ const arrayItem =[1,2,3,4]
 
 console.log(arrayItem.includes(2)) //It gives true.
 
+/**
+ * Array.sort: If you want to compare 2 pairs use sort with compare functions.
+ */
+
+ let employee=[
+    {name:'carry',age:34,joined:'asdsd'},
+    {name:'harry',age:36,joined:'asdsd'},
+    {name:'marry',age:35,joined:'asdsd'},
+    {name:'barry',age:30,joined:'asdsd'},
+]
+
+employee.sort((a,b)=>{
+    let fa = a.age;
+    let fb = b.age;
+    console.log('fa ' + fa);
+    console.log('fb ' + fb);
+    if(fa > fb) return 1;
+    // if(fa < fb ) return -1;
+    // return 0
+})

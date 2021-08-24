@@ -40,3 +40,19 @@ var maxDepth = function (s, num) {
 let input = "(1+(2*3)+((8)/4))+1";
 let num = 8;
 console.log("max depth is  " + maxDepth(input, num));
+
+/////////////////////////////////////////////////////////////////
+
+const maxDepth = (s) => {
+  let l = 0,
+    r = 0;
+  return s.split("").reduce((depth, c) => {
+    if (c === "(") l++;
+    if (c === ")") r++;
+
+    return Math.max(l - r, depth);
+  }, 0);
+};
+
+console.log(maxDepth("(1+(2*3)+((8)/4))+1"));
+

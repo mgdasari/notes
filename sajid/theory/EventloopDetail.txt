@@ -1,0 +1,33 @@
+**)Event loop in Javasacript:
+---------------------------
+
+In Javasacript event loop is used to achieve asynchronous model.
+
+Detail:
+-------
+
+setTimeout(()=>{console.log('hello')},1000)
+
+In Javasacript whenever above line is executed a webAPI is called and main thread get free for next line execution. These webAPI after successfully executed store callback function in callback queue which is again executed by event loop.With webAPI AND event loop Javasacript achieve asynchronous model.
+
+Refference:
+---------
+
+https://medium.com/front-end-weekly/javascript-event-loop-explained-4cd26af121d4
+
+**) Event loop in Node.js:
+--------------------------
+
+In node.js we have library called as "LIBUV" which implements event loop, thread pool and give access to under line file system.
+
+In javascript we have webapi,callback queue,eventloop to achieve asynchronous nature.
+
+In node.js we have event loop,thread pool,underline library,callback queue,eventloop to achieve asynchronous nature.
+
+Node.js also hanlde concurrent clients request with the help of event queue (where all the request is registered) and eventloop.eventloop process all the request one by one.The time taking task is assigned to thread pool which works in background,complete task and register a callback and eventloop give response to client.
+
+This why node.js handles request concurrently and asynchronously.
+
+Refference:
+-----------
+https://www.dotnettricks.com/learn/nodejs/exploring-nodejs-code-execution-process

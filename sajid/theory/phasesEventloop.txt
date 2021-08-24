@@ -1,0 +1,55 @@
+Refference:
+-------------
+
+https://medium.com/@kunaltandon.kt/process-nexttick-vs-setimmediate-vs-settimeout-explained-wrt-different-event-loop-phases-c0506b12921d
+
+
+As we are aware that complete code is executed first by event loop and if required it assign work to thread pool.
+
+
+Below are the phase of event loop.
+
+1) poll
+2) check
+3) close callback
+4) timers
+5) pending callback
+6) idle, prepare.
+
+
+Main phase out of this poll,check,timers
+
+poll phase:
+--------------
+
+POLL Phase handles all the input/output operations.
+All the synchronos javascript code are executed in poll phase.
+
+Example 1:
+---------
+
+console.log('first');
+console.log('second');
+
+All the above code will executed when the event loop is poll phase.
+
+Example 2:
+----------
+
+setTimeout(() => {
+    console.log('2');
+});
+console.log('1');
+
+1) So when eventloop encounter above code. This code is first executed in poll phase.
+
+a) It execute setTimeout and regiester callback  to callback queue of timer phase by node.js API
+b) print 1
+
+
+2) So event loop after poll phase completion it goes one by one and reach to time phase.
+
+
+3) As soon as it reach timer phase. The event loop execute the code in timer queue.And it print 2 on console.
+
+4) The timer phase use FIFO queuing mechanism to queue multiple callbacks, to be executed in single iteration of eventloop

@@ -1,0 +1,25 @@
+what is object prototype?
+-------------------------
+
+>>
+1) All objects in javascript inherit the properties from a prototype.
+
+Examples:
+---------
+1) Date object inherit properties and methods from Date prototype.
+2) Math object inherit properties and methods from Math prototype.
+3) Array object inherit properties and methods from Array prototype.
+
+**)Prototype allow us to use properties and methods "ON" an object even if that properties and methods are not part of that object
+
+Examples:
+---------
+1) 
+var arr=[];
+arr.push(2);
+console.log(arr); //2 here we have not defined .push method in the arr object but still we are able to use it. As this method is a part of array prototype
+
+Note:
+-------
+
+The javascript try find a push method in the array arr but it dose not find it. So it checks in array prototype and find the method.
