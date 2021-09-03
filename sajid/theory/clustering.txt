@@ -1,0 +1,42 @@
+Q) What is clustering?
+
+>>clustering is basically you increase no of process to increase the performance of application.
+
+1) By defalt 1 cpu is used by one process.If you want to use all the cpu then clustering concepts comes into picture.
+
+code : 
+-------
+
+Please reffere./home/mukund/notes/liveProjectModules/clustering/index.js
+
+Q) can v create multi threading in node.js?
+>Yes we can do that by creating child process.It can be done in 4 ways 
+1) exec:This is used when u want execute sh command.It retunr buffer
+2) execFile: This is used when u want execute sh file .It retunr buffer
+3) spwan: 
+when you create child process using spwan. It does not create different v8 engine instance but use same v8 engine instance.It return streams and it is used for large amount of data.
+
+Please reffere./home/mukund/notes/liveProjectModules/clustering/spwan.js
+
+4) fork:
+when you create child process using fork. It create different instance of v8 engine.It throw an event and you need to catch it by .on method.
+
+Please reffere./home/mukund/notes/liveProjectModules/clustering/fork.js
+
+Q) Difference between process and thread?
+
+>>Process:
+------------
+1) while creating a process a system calls are involved like fork
+2) The data involved in different process are not shared.They have different copies
+3) OS treat different process differently.
+4) Blocking of any process dose not block other process.
+5) ****Context switching is slower as diferent process are treated differently.
+
+Threads:
+---------
+1) while creating a thread system cal are not imvolved.
+2) The data are shared among different thread.
+3) OS treat different thread as part of same process.
+4) Blocking of single thread can block all the thread.
+5) *****Context switching is fast as all thread are part of same process,

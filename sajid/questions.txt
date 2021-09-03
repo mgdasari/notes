@@ -1,0 +1,5 @@
+1) Deploymments/deploying services in Team.
+2) CI/CD 
+3) about project and its scalibilty
+4) apple to pale conersion questions.
+5) why and how node.js came into picture.

@@ -1,0 +1,72 @@
+what is oops?
+
+>> oops is a programing model that relies on object and class.
+
+
+Any language suport oops if it meet following criteria:
+-----------------------------------------------------
+
+1) Association
+2) composition
+3) aggregation
+
+var johnSmith = {
+    firstName: "John",
+    lastName: "Smith",
+    address: { //Composition
+    street: "123 Duncannon Street",
+    city: "London",
+    country: "United Kingdom"
+    }
+   };
+   
+   var nickSmith = {
+    firstName: "Nick",
+    lastName: "Smith",
+    address: { //Composition
+    street: "321 Oxford Street",
+    city: "London",
+    country: "United Kingdom"
+    }
+   };
+   
+   johnSmith.parent = nickSmith; //Association
+   
+   var company = {
+    name: "ACME Inc.",
+    employees: []
+   };
+   
+   //Aggregation
+   company.employees.push(johnSmith);
+   company.employees.push(nickSmith);
+
+   console.log(company)
+
+   Apart from above iit should also support
+   -----------------------------------------
+
+   4) encapsulation : hidding data from private use.
+   5) inheritance : It can be done using protyping.
+   6) polymorphism : One object but it different functionality.
+
+   ############################################################
+
+   Q) What is functional programing?
+   ------------------------------------
+1) It is programming model which is based on functions.
+
+Q) What is parallel and asynchronous programing:
+-----------------------------------------------
+parallel:
+-----------
+
+>>parallel programming is like big problem broke into small one and all small problem are solved simultaneously.
+
+asynchronous:
+-------------
+
+>> asynchronous programing is like the task which are time consuming are completed in backround and notified when it is completed.
+
+
+

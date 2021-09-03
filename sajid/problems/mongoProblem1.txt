@@ -1,0 +1,65 @@
+DeNormalized:
+----------
+user:{
+    {
+        id:01
+        name:mukund,
+        empid:1234
+        address:{}    
+        
+    }
+    ,
+    {   id:02
+        name:sajid,
+        empid:3454,
+        address:{}
+    },
+    {   id:03
+        name:nouman,
+        empid:5656,
+        address:{}
+    }
+}
+
+Normalized:
+------------
+
+user:{
+    {
+        id:01
+        name:mukund,
+        empid:123,
+        addressId:<03>
+        
+    }
+    ,
+    {   id:02
+        name:sajid,
+        empid:3454,
+        addressId:<04>
+    },
+    {   id:03
+        name:nouman,
+        empid:5656,
+        addressId:<05>
+    }
+}
+
+address:{
+    {
+        id:03
+        contact:
+        address:
+    },
+    {
+        id:04
+        contact:
+        address:
+    },
+    {
+        id:05
+        contact:
+        address:
+    }
+
+}

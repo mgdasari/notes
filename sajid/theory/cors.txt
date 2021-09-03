@@ -1,0 +1,23 @@
+what is cors ?
+
+>> Cross origin resource sharing.
+
+1) This header mechanism which allow one website to access resource share by other domain using cors.
+
+2) This technology is only applicable to browser based application.
+
+3) whenever a browser want to access the resource it send the preflight headers.
+
+Request:
+-----------
+
+GET /api/requestApiKey HTTP/1.1
+Host: vulnerable-website.com
+Origin: https://subdomain.vulnerable-website.com
+
+
+4) For this request server provide below response.
+
+http 200 ok
+access-controlled-allowed-origin: https://subdomain.vulnerable-website.com
+acces-controlled-allowed credential: true.

@@ -3,6 +3,8 @@ Refference:
 
 https://medium.com/@kunaltandon.kt/process-nexttick-vs-setimmediate-vs-settimeout-explained-wrt-different-event-loop-phases-c0506b12921d
 
+######) The event loop is an infinitely running task which keeps looping infinitely.
+
 
 As we are aware that complete code is executed first by event loop and if required it assign work to thread pool.
 
@@ -17,7 +19,7 @@ Below are the phase of event loop.
 6) idle, prepare.
 
 
-Main phase out of this poll,check,timers
+*****) Main phase out of this poll,check,timers
 
 poll phase:
 --------------
@@ -52,4 +54,81 @@ b) print 1
 
 3) As soon as it reach timer phase. The event loop execute the code in timer queue.And it print 2 on console.
 
-4) The timer phase use FIFO queuing mechanism to queue multiple callbacks, to be executed in single iteration of eventloop
+4) The timer phase use FIFO queuing mechanism to queue multiple callbacks, to be executed in single iteration of eventloop.
+
+Example 3:
+-----------
+setimmediate:
+---------------
+
+setimmediate(()=>{
+    console.log(2)
+},100)
+console.log(1)
+
+1) so when the eventloop encounter above code. below steps happens
+
+a) All the synchronous code is executed first in poll phase.It execute setimmediate and register callback in check phase and print console 1.
+b) Now when the check phase comes the callback in check phase queue is executed and 2 is printed.
+
+
+****)What is difference between in setimmediate and setTimeout:
+-------------------------------------------------------------------
+
+1) Both setTimeout and setimmediate run before the iteration of next event loop.
+
+****)setimmediate has a major priority then settimeout.
+
+example:
+--------
+
+settimeout(()=>{console.log(2)},0);
+setimmediate(()=>{console.log(3)},0);
+console.log(1);
+
+output:
+---------
+1
+3
+2
+
+****) This means that if setimmediate and setTimeout has to executed at same time then setimmediate willbe executed first.
+
+
+Example 4:
+----------
+process.nexttick()
+-------------------
+1) process.nexttick() has a queue called as nexttickqueue.
+2) This nexttickqueue is not a part of any queue of phases pf eventloop.
+
+3**) This queue is execute after every phase.
+4) so after poll phase first queue which is executed is nexttickqueue.
+
+example:
+---------
+
+process.nextTick(() => {
+    console.log('2');
+});
+setImmediate(() => {
+    console.log('3');
+});
+console.log('1');
+
+output:
+-------
+Here code is executed in poll phase.and below step happens.
+
+1) process.nexttick() is executed and callback is regietered in nexttickqueue.
+2)setimmediate is executed and callback is regiestered on check phase.
+3) it execute 3 line and 1 is printed.
+3) so after poll phase a nexttickqueue is executed before going to check phase.And 2 is printed.
+4) finally 3 is printed
+
+output:
+---------
+1
+2
+3
+
