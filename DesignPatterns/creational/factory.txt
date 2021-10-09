@@ -1,0 +1,4 @@
+Factory design pattern:
+---------------------------
+
+Factory pattern dose not allow you to create instance of object directly. It create a factory object  which helps for creating object for client.

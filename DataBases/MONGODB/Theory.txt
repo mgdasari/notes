@@ -157,3 +157,62 @@ Q) Aggregation:
 3) It has pipeline concept attach to it.
 
 pipeline=[{{$match:{}},{$group:{}},{$project:{}}}]
+
+Q) How replication works ?
+>> All the client who makes changes goes to primary node and updates are pushed to replica set which are connected to primary node
+
+Q)What is sharding?
+--------------------
+1) Vertical scaling : 
+----------------------
+Suppose you want to support a 100 million data record. So you use 8gb ram,100 gb disk and 4 cpu Now if you want to support 100 million more then you add up the resources 8gb ram,100 gb disk and 4 cpu. This is called as Vertical scaling.
+
+2) Horizontal scaling(sharding):
+---------------------------------
+Suppose you want to support a 100 million data record. So you use 8gb ram,100 gb disk and 4 cpu Now if you want to support 100 million, Then you create a group of data let say 50 million data and store in on shard or serve with 4gb ram,50 gb disk and 2 cpu like wise we will use 4 shard to support 200 million data.
+
+The data is divide in range with keys.
+
+Some basic commands.
+--------------------
+1) mongod ----To start a mongo db
+2) mongo ---to connect to mongod
+3) show dbs --It will show databases.
+4) use dbs -- It will select the database.
+5) use mukund -- If this database is not present. Then it will create a database name mukund.
+6) mukund.text -- It will create a collection.
+7) db.text.insert() -- It will insert documment in the collection.
+8) db.items.insertOne({name:"sony es30",price:13000,stock:33})---It wiill create a collections and insert the data in it with unique objectId.
+9) db.item.find({price:13000}) --It will return a document whose price is equal to 13000.
+10) db.items.deleteOne({price:13000}) ---It will delete first oject of item with price 13000.
+11) db.createCollection('mukund');
+12) db.items.updateOne({name:mukund},{$set:{price:20}});
+13) db.items.drop()
+And command:
+---------------
+db.item.finc({},{})
+
+db.item.find({price:{$gte:13000}},{stock:{$gte:33}})
+
+Or command:
+------------
+db.item.finc($or:[{},{}])
+db.item.find($or:[{price:{$gte:13000}},{stock:{$gte:33}}])
+
+Q) Profiler:
+------------
+It is used to monitor a queries.
+
+Q) Journalism:
+------------------
+
+It is used to take safe back up.
+
+Q) What are indexes in mongodb?
+>>indexes are special structure in mongodb which stores data in easy to traverse form.
+
+Q) What is grid in mongodb?
+>> Grid in mongodb is used for storing large file like images and all.
+
+Q) Does mongodb has primary and foriegn key?
+>>> By default  mongodb do not have primary and foriegn key.But you can achieve by embedding one document into other.

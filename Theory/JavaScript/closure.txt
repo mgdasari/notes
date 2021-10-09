@@ -4,7 +4,7 @@ What is closure ?
 1) closure is an ability of a function to remember the variable and function that are declared in its out scope.
 2) whenever a function is created a closure is also created.
 
-3)Javascript has a lexical scope.
+3) Javascript has a lexical scope.
 4) lexical scoping means that variable defined outside scope are automatically available inside the scope.which means you dont need to pass teh variable explicitly.
 
 

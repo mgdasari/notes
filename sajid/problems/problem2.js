@@ -2,9 +2,9 @@
  * Written in terms of promise 
  */
 function print(a){
-    return new Promise((resolve,reject)=>{
+    return new Promise((resolve,reject)=>{console.log(a)
         setTimeout(() => {
-            console.log(a)
+            // console.log(a)
             resolve ('done')
         }, 3000);
     })
@@ -18,6 +18,14 @@ function main(){
     })
 }
 main()
+
+
+async function main1(){
+    await print('hello')
+    await print('hello11')
+    await print('hello22')
+}
+main1();
 
 
 
@@ -36,14 +44,14 @@ main()
  * interms of asyn await
  */
 
-function print1(q){
-    setTimeout(() => {
-        console.log(q);
-    }, 3000);
-}
+// function print1(q){
+//     setTimeout(() => {
+//         console.log(q);
+//     }, 3000);
+// }
 
-async function main(x){
-   await print1(x);
-}
+// async function main(x){
+//    await print1(x);
+// }
 
-main('sajid').then(()=>{main('questions').then()})
+// main('sajid').then(()=>{main('questions').then()})

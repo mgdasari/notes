@@ -1,0 +1,35 @@
+Refference: 
+-------------
+
+https://blog.bluzelle.com/things-you-should-know-about-database-caching-2e8451656c2d
+
+Introduction:
+-------------
+
+Usually we have 3 tier archieture.
+
+1) Presentattion Tier: User Interface
+2) Application Tier: Bussiness logic
+3) Data tier: Data queries and interaction.
+
+Each of these tier can be maintained and worked independently.And in most case there are in different host.
+Therefore a Application queries are limited to the network performannce.Data retrival time play key role in user experince and is critical requirment in almost all Application.
+
+What is caching and how it work?
+-------------------------------
+
+1) Caching is buffering technique which stores frequestly queried data in temorary memory.
+2) It make data easier to accessed and reduces the work load from database.
+
+Example.:
+---------
+First time it store into temporary location and retrive data from it every time.
+
+3) The cache can be set up in different tiers or on its own, depending on the use case.
+
+Benefits:
+------------
+1) performannce
+2) scalibilty
+3) availability.
+

@@ -69,4 +69,33 @@ asynchronous:
 >> asynchronous programing is like the task which are time consuming are completed in backround and notified when it is completed.
 
 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+Q)how indexing work?
+
+>>If you dont do indexing.Then for every search, Then It scans through complete table.But of indexes is there it find row for the specific column quickly.
+
+Q) search on primary key without indexes will take more time then indexing on particular field.
+>>No it will take same time as primary key also has indexing on it.
+
+################################################################
+
+Q) Difference between typescript and javascript
+Q) Difference between typescript amd node.js
+
+typescript:
+1) Typescript is super set of javascript
+2) Typescript needs to be conplied to check type which then converted into javascript and then it is understood by browser also.
+3) javascript was not be able to use in server side development.So typescript can be used for same.
+4) It is object oriented language
+
+
+javascript:
+----------
+1) It is scripting language.
+2) It is can be only on the clinet side.
+
+
+
 

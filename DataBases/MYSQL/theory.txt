@@ -1,0 +1,85 @@
+Q) What is dbms ?
+>>Data Base management System is a software used for storing and retriving data while considering security measures.
+
+Q) Different type of dbms?
+>> RDBMS,document orineted DBMS.
+mysql is a RDBMS.
+
+Q) WRITE A QUERY FOR COLUMN ADDITION IN TABLE?
+>>ALTER TABLE tableName add columnName data_type;
+
+Q) What is foriegn key ?
+>>foriegn key is basically use to connect 2 tables.
+
+Q) What is work benches?
+>>work_benches is GUI which helps to manage database.
+
+Q) How to drop a column in table?
+>>Alter tabel tableName drop columnName
+
+Q) How to delete row in mysql.
+>>delete from car where id=1133
+
+Q) What are joins?
+>>Joins are used when we need to fetch data from 2 or more table.
+
+Q) Different type of joins?
+>>
+1) Inner joins: when you want common data between 2 tables.Then we use inner joins.
+
+select order.orderid,custmer.customerName from order inner join customer on oerder.orderid=customer.orderid
+
+2)left joins: When you want data of the left side but not of intersection then we use left joins.
+
+select order.orderid,custmer.customerName from order left join customer on oerder.orderid=customer.orderid
+
+
+3)right joins: When you want data of the right side but not of intersection then we use right joins.
+
+select order.orderid,custmer.customerName from order right join customer on oerder.orderid=customer.orderid
+
+4) full joins: when you want full data from both the table then we use full joins.
+select order.orderid,custmer.customerName from order full join customer on oerder.orderid=customer.orderid
+
+Q) Union:
+---------
+Union is used to combine the result of 2 statement.
+
+select * from table1 Union select * from table 2
+
+Q) Procudure in mysql:
+------------------------
+>>Procudure ARE basically small program in mysql.
+suppose you want to write quiries again and again.Then you can save in Procudure and just call it.
+
+create Procudure getName
+Begin
+select * from tableName
+End
+
+exec getName;
+
+Q) Functions:
+--------------
+Functions are same like Procedure but it return a data_type
+
+create Functions getName
+return value
+Begin
+select * fron tableName
+End
+
+Q) What is difference between Functions and Procedure:
+----------------------------------------------------------
+>> 1) Functions return value but in Procedure its optional.
+2) Functions can not call Procedure but Procedure can call Functions.
+
+Q) OrderBy:
+-----------
+>> It order the output ascending/descending for any field.
+
+Q) Triggers:
+-------------
+
+Triggers are basically when you want to perform smething after some event like delete/addition etc.
+

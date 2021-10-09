@@ -1,0 +1,1 @@
+lodash is a npm module which is used for managing and editing the object and array.

@@ -1,0 +1,73 @@
+Below are the list of module used in DM/DR Projects:
+---------------------------------------------------------
+
+**)DM:
+-------
+
+1) express cassandra driver ---Managing data from cassandra u use express cassandra module.Reffere official doc for all code.
+2) cassandra-drivers-- cassandra-drive provide auth functionality.
+example: You can send a auth parameter in client creation process.
+3) ldapjs--ldapjs is used to connect to ldap data base by using createClient method.
+
+4) niugu-generic-pool--Generic pool module is used to reuse or throttle usage of expensive resource like database connections.
+
+https://www.tabnine.com/code/javascript/functions/generic-pool/Pool
+
+5) oracldb
+
+Hashing and encryption
+--------------------------
+crypto -- It is used for hashing and encryption/decryptions
+
+Most used modules:
+--------------------
+
+1) lodash--It is used when you want to manage and edit object and array then lodash module is used.
+2) readline--This module is used for reading inout stream line by line.This module basically wrap the process standard output and process standard input object.[Agar muje console se input lena hnn and usko process karke output dikhana hn to we use readline module]
+3) uuid--It is a module used to generate a unique ID which can be used in the network or systems.
+4) fs--To read and write a file from a path
+5) moment-- This module is used to formate the dates.
+6) connection-tester--
+
+unit testing:
+--------------
+mocha and chai--
+
+RabbitMQ:
+-----------
+Amqplib-- https://www.rabbitmq.com/tutorials/tutorial-one-javascript.html
+
+logging library:
+-----------------
+winston-- https://www.section.io/engineering-education/logging-with-winston/
+winston-daily-rotate-file--
+
+**)DR:
+-------
+
+1) express cassandra driver--
+2) cassandra-drivers--
+3) ldapjs--
+4) niugu-generic-pool--
+5) oracldb--
+
+Hashing and encryption
+--------------------------
+crypto --It is used for hashing and encryption/decryptions
+
+Most used modules:
+--------------------
+
+1) lodash
+2) readline
+3) uuid
+4) fs 
+5) moment
+6) chalk --- It is used to have colourful console.
+7) clear
+8) clui -- It is used to have styling in column vise example use in recon to display 
+mistmatch data,matcheddata,count,
+9) figlet --It is used to display text in figLet formate used in recon.
+10) Inquirer
+11) log-update
+12) just-diff --It is used tp find difference in 2 object. In recon we used to compare ldap object and cassandra object

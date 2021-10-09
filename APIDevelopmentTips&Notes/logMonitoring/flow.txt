@@ -1,0 +1,12 @@
+In IDAM we have 2 project for log monitoring.One for displaying the all the testing result to UI i.e automationUI and all the application log are displayed to UI via KIBANA using ELK stack
+
+Flows:
+--------
+1) Install filebeat on the testing server or application server 
+2) logstash is centralised server who get logs from log beats and send the data either to MONGO DB or elastic db.Before sending it process the data or map the data using gork patter u can use online portal gork debugger to writte grok patter.
+
+3) So the logstash after processing the data send to mongo db or elastic db.
+4) The data sent to mongodb is used by automation ui project to display the testing pt endorance results.
+5) The data sent to elastic is used by kibana to display graph. As elastic process the data and store so that it can be easly fetched by kibana and display the result.
+
+In kibana u need to create a indexes for displaying the graph.

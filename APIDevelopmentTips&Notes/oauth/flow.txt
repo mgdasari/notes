@@ -1,0 +1,18 @@
+In Idam we have used grant_type=authorization code flow..
+In Idam we have used HYDRA for implementing oauth..
+
+HYDRA:
+-------
+1) Hydra basically is an oauth and openId connect provider.It is an wrapper which implement oauth and openId connect.
+2) It is like download, install and use it.
+3) It has docker image as well you can run that image and use it.
+
+4**) HYdra provide an API for all the functionality. Same like CA API gateway it has in build oauth functionality. You need to install ova file and install database and start using and API login,logout,refresh It had a portal for registring and user.
+
+5) For hhydra a document is made its in git.
+6) It has a config file, where you can do setting.
+7) HYdera internally uses mysql database.You need to create a blank database and run a  command which migrate schema to mysql.
+
+https://www.ory.sh/hydra/docs/cli/hydra-migrate-sql
+
+8) In these confg file you will get all the details of teh APIs as well login logout consent apis.

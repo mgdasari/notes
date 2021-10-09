@@ -1,0 +1,42 @@
+What are design pattern?
+--------------------------
+>>
+1) Design pattern are solution to the problem we encounter every day of programming.
+2) They basically help in solving problems related to object generation and integrations.
+3) Design pattern act as a template which we apply to solve the problems.
+
+
+History of Design pattern?
+----------------------------
+1) The four authors of the books Elements of reusable Object oriented software are reffered as Gang of fours.
+2) explains the 23 classic design pattern which has changed the software development life cycle.
+
+
+Types of Design pattern:
+-------------------------
+1) Creational:
+----------------
+
+This type deal with object creation and initialization. This pattern give program more flexibility in deciding which object needs to be created for a given case.
+
+Eg: Singleton, Factory, Abstract Factory.
+
+
+2) Structural:
+--------------
+This type deal with object and clases composition.
+This pattern deal with decoupling interfaces and implementing clases and its objects.
+
+Eg:Adapter,Brideg etc..
+
+3) Behavioural:
+------------------
+This type deal with communication between object and classes.
+
+Eg: Command,chain of responsibility,Interpreter etc
+
+
+Pre-requities:
+----------------
+
+Understanding of Object oriented concept like Abstraction, polymorphism, encapsulation. Knowledge of classes, Interfaces and Abstract clasess will be helpful.

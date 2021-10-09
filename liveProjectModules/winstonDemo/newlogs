@@ -1,0 +1,10 @@
+info: Sep-29-2021 13:04:05: 	Server started and running on http://localhost:3000
+error: Sep-29-2021 13:05:11: 	500 - Internal Server Error - y is not defined - /calc - GET - ::1
+error: Sep-29-2021 13:05:11: 	400 || Not Found - /favicon.ico - GET - ::1
+info: Sep-29-2021 13:07:44: 	Server started and running on http://localhost:3000
+info: Sep-29-2021 13:07:50: 	500 - Internal Server Error - y is not defined - /calc - GET - ::1
+error: Sep-29-2021 13:08:27: 	400 || Not Found - /calc11 - GET - ::1
+error: Sep-29-2021 13:08:47: 	400 || Not Found - /calc11 - GET - ::1
+info: Sep-29-2021 13:08:50: 	500 - Internal Server Error - y is not defined - /calc - GET - ::1
+info: Sep-29-2021 13:08:59: 	Server started and running on http://localhost:3000
+info: Sep-29-2021 13:25:38: 	Server started and running on http://localhost:3000

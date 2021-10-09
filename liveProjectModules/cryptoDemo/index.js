@@ -9,6 +9,7 @@ const crypto = require('crypto');
 
 let password = '12345678';
 let salt = '98765';
+let key = '98765';
 
 
 const ssha= function(password,salt){
@@ -22,5 +23,6 @@ const ssha= function(password,salt){
     console.log(ssha);
 
 }
+
 
 ssha(password,salt)

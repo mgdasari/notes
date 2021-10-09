@@ -1,0 +1,11 @@
+IDAM CODE flow:
+
+1) From server file flow go to router.js where url is validated.
+2) From router.js to controller.js
+3) From controller.js for headerValidations a headerValidations.js is created and in this all the header fields are validated,For each field a function is written.After all check a boolean or error is thrown if there is an error.
+4) After header validation a controll comes back to controller.js and then goes to requestMapper.js where existense of field checkked and a getter setter  is done to create a this object which has all the field and functions.It return an this object if there is error it throws and error.
+5) Now the execution again comes back to controller and it goes to field level validation.Here for each field a validation is applied (null,xssr,astrik check) and a mandatory field validation is applied.Once the validation is done the flow again comes to controller.
+6) Now the 
+7) In this we have majorly we have _this = this and _req = req and _res= res this we have done for variable scoping.
+
+Which means a variable will not have accessed outside the functions like in process.on() and to do this we have used variable scoping technic

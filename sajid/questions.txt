@@ -3,3 +3,21 @@
 3) about project and its scalibilty
 4) apple to pale conersion questions.
 5) why and how node.js came into picture.
+6) hezalcast and cassandra (hezalcast cache in memory and cassandra is hard disk.)
+7) why cassandra over other no sql.
+5) why write is better in cassandra.(
+compation 
+
+and write new data in table and when query happens it select all the data and cuurentdata wo return karta hn
+
+
+)
+search on primary key without indexes will take more time then indexing on particular field.
+--->primary key by default index hota hn
+---->when u do index it create a mapping of number(ascending) and address 
+
+
+why lags in replica--->
+how read and write  locks works in db.--->
+how u can call http call from server 
+how u r writting testcase.

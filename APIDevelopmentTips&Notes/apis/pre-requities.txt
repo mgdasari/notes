@@ -1,0 +1,2 @@
+1) Before starting any API development make a Sequence diagram of the API. It has a flow of API.
+2) write all possible test cases 

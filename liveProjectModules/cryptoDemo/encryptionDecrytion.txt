@@ -1,0 +1,10 @@
+What is encryption?
+
+>> encryption is a process with the help of which we convert the data from plain text formate to unreadbale formate.
+
+It has 2 type symmetric and Asymettric:
+
+1) If you use same key for encryption and decryption then it is symmetric
+2) If you use different key for encryption and decryption then it is Asymettric.
+
+So while sotriing data in db use encrytion to store as it need to decrypted and validate.If you hash then it wont be possible to bring back to normal state.

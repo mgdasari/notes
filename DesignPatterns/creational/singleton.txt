@@ -1,0 +1,20 @@
+Singleton design pattern is a type of Creational design pattern.
+
+Singleton design pattern is used when u want to have only one object of a class needs to be created.
+
+example: 
+
+1) Suppose there are 3 objects. ObjectA, ObjectB, Objectc
+2) his objects are refferenced to single instance of a object
+3) This single instance is responsible for calling underlying methods.
+
+Where to use:
+-----------
+
+Suppose you want particular object to be used throughout  the project. So you wont create a object everytime in each file. So better create a sinhle instance and use it where it is required.
+
+
+https://www.youtube.com/watch?v=LypTOnfkfvA&list=PL6n9fhu94yhUbctIoxoVTrklN3LMwTCmd&index=3
+
+
+reffere part 2

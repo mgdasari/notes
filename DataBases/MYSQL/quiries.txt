@@ -1,0 +1,58 @@
+Q) Write a query to fetch the EmpFname from the EmployeeInfo table in the upper case and use the ALIAS name as EmpName.
+
+>> selct UPPER(EmpFname) AS EmpName FROM EmployeeInfo;
+
+Q) Write a query to fetch the number of employees working in the department ‘HR’.
+
+>> select count(*) from employees where department ='HR';
+
+Q) Write a query to get the current date.
+>> select GETDATA() ;
+
+Q) Write a query to retrieve the first four characters of  EmpLname from the EmployeeInfo table.
+
+>> select substring(EmpLname,1,4) from EmployeeInfo 
+
+Q) Write a query to fetch only the place name(string before brackets) from the Address column of EmployeeInfo table.
+
+>> select substring(Address,1,charIndex(')',Address)) from EmployeeInfo;
+
+Q) Write a query to create a new table that consists of data and structure copied from the other table.
+
+>> Insert INTO table2 select * from table1 where condition;
+
+Q) Write q query to find all the employees whose salary is between 50000 to 100000.
+
+>> Select * from employees where salary between 50000 to 100000
+
+Q) Write a query to find the names of employees that begin with ‘S’
+
+>>select name from employees where name like 's%'
+
+Q) Write a query to find the names of employees that ends with ‘S’
+
+>>>>select name from employees where name like '%s'
+
+Q) Write a query to fetch top N records.
+
+>> select TOP N * from tableName order by salary DESC;
+
+Q) Write a query to retrieve the EmpFname and EmpLname in a single column as “FullName”. The first name and the last name must be separated with space.
+
+>>select concate(EmpFname,'',EmpLname) as FullName from employees ;
+
+Q)  Write a query find number of employees whose DOB is between 02/05/1970 to 31/12/1975 and are grouped according to gender
+
+>> select count(name),gender,dob from employees where dob between 02/05/1970 to 31/12/1975 group by gender
+
+Q) Write a query to fetch all the records from the EmployeeInfo table ordered by EmpLname in descending order and Department in the ascending order.
+
+>> Select * FROM EmployeeInfo OrderBy EmpFname desc and OrderBy Department asc;
+
+Q) Write a query to fetch details of employees whose EmpLname ends with an alphabet ‘A’ and contains five alphabets.
+
+>>Select * FROM employees where name like (_____A);
+
+Q) Write a query to fetch details of all employees excluding the employees with first names, “Sanjay” and “Sonia” from the EmployeeInfo table.
+
+>>select * from employees where firstName not in ('sanjay','Sonia')

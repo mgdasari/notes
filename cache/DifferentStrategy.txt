@@ -1,0 +1,27 @@
+Refference: https://blog.bluzelle.com/things-you-should-know-about-database-caching-2e8451656c2d
+
+
+Strategy is use to determine the relation between the DATA SORUCE, CACHING SYSTEM and HOW YOUR DATA CAN BE accessed.
+
+There are various technic which can impact your perfomance.
+
+So before archetecting you should go through the data to be accessed so that you determine the Strategy.
+
+Different Strategy:
+
+1) cache aside: read from cache if not present query to db and store to cache.
+2) read through: Application layer will always read from cache and cache will get update from database.
+3) write through: Application will write to cache and cache will update the database.
+4) write back: It is same like write through but it write to database once in while.
+5) write around: Application write data to db but read the data from cache. If not present in cache it go to db.
+
+
+
+Best of above is cache aside.
+
+Because:
+
+1) Resilient to the database failure.
+2) simpler to implement.
+3) data model can be different between cache and db.
+4) Best for read heavy work load.

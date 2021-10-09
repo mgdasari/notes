@@ -1,0 +1,37 @@
+https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2
+
+
+What is Oauth?
+>> Oauth is authorization framework that enable applications to obtain limited acces to it users account.
+
+example: login with google or facebook.
+
+Lets say u dont have account in bookmyshow but still you want to login you have option like login with google or facebbok.What happens is iT WILL TAKE YOU TO LANDING PAGE OF GOOGLE and once authentication happens,then bookmyshow take ur consent that are bookmyshow will access basic details.
+
+So You are authorizing applications to access your basic details.And to do this we require oauth framework.
+
+what is openId connect ?
+>> openId connect is used for authentication.
+
+IMPORTANT TERMS IN OAUTH:
+----------------------------
+
+1) Resource owners: The user who is tryiing too login is resource owners
+2)authorizating server : The host server who keep the user account safe is authorizing server in our case google is example.
+3) client application: It is an application to whom we grant an access to access the basic details,
+4) clientId and client screte:
+5) grant_type:
+6) scope:In seco we used to ditermine which is IDP  to authenticate a user from.
+There are differen type of flow in oauth based on grant_type:
+-----------------------------------------------------------------
+1) password: users sends user name and password for authentication and get access token
+2) oauth code: users sends user name and password for authentication and get access code and with acess code  get acccess token.
+3) implicit: users sends user name and password for authentication and get access code and with acess code  get acccess token in url. This one time aticity at the first.
+4) client credintial: Here applications client key and screte are used to get access token.
+
+https://docs.pivotal.io/p-identity/1-11/grant-types.html  ---- explanation Different type of grant flow.
+
+
+**) In Idam we have used grant_type=authorization code flow
+
+**) In Idam we have used hydra for implementing oauth..

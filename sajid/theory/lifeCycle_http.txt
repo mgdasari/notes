@@ -1,0 +1,16 @@
+Life cycle of HTTP:
+---------------------
+1) You enter a url and press enter
+2) The browser check in its browser dns for ip for that domain.
+3) If it does not find it check in router dns
+4) If not then it find in ISP dns
+5) If it does not find in ISP it do the recurrsive search if it find it return to browser with IP or it give host not find.
+
+6) Once Browser finds the IP it initiate the TCP connection.
+7) Browser send syn packet to server
+8) The server accpet the request and in return send ACK packet to client.
+9) The browser in return send ack packet and establish a connection.
+
+
+10) Once the connection is made the HTTP request is sent to server.
+11) server after processing request response to browser and connection is closed.

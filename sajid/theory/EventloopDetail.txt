@@ -22,7 +22,7 @@ In node.js we have library called as "LIBUV" which implements event loop, thread
 
 In javascript we have webapi,callback queue,eventloop to achieve asynchronous nature.
 
-In node.js we have event loop,thread pool,underline library,callback queue,eventloop to achieve asynchronous nature.
+In node.js we have event queue, event loop,thread pool,underline library,callback queue,eventloop to achieve asynchronous nature.
 
 Node.js also hanlde concurrent clients request with the help of event queue (where all the request is registered) and eventloop.eventloop process all the request one by one.The time taking task is assigned to thread pool which works in background,complete task and register a callback and eventloop give response to client.
 
