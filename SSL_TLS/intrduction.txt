@@ -1,0 +1,43 @@
+MIMT:
+-------
+Man in middle attack is nothing but If your channel is not secure anyone can hack the channel and replicate the request. To avoid this we need encryption.
+
+encryption:
+--------------
+It is a process in which we convert data into no readable formate.
+
+Different  type of encryption:
+---------------------------------
+
+1) Symmetric : In this for encryption and decryption same key is used. 
+---------------
+2) Asymmetric: 
+-----------------
+1) In this there is concept of public and private key.
+2) If the data is encrypted by public key then it can only be decrtpted by its private keys and vice a versa.
+3) It  is most safe, But high cpu consumption.
+
+
+What is SSL?
+------------
+>> SSL is nothing but secure socket layer. It solves the problem of MIMT. It help to maintain secure link between clinet and server.
+
+What is TLS?
+-------------
+>> TLS stands for transport layer security.
+
+SSL handshake:
+-----------------
+
+1) The browser first request server and ask server to identify itself.
+2) server send copy of ssl certificate, public and private key.
+3) browser then check incoming certificate with its trusted certificate stores and validate the certificate.
+4) Once it check the validity of root, It encrypit the Symmetric key with public key and send back to server.Server decrypt the session key using private key and send acknoledge asking browser to start  the encrypted session using Symmetric key.
+5) ONce the acknoledge is recieved the browser start the encrypted session using Symmetric key.
+
+
+THis is one way ssl in which Symmetric key is used for encryption and decryption.
+
+SSL v4.0 is equal to TLS v1.0
+
+TLS is more enhance version compare to ssl.

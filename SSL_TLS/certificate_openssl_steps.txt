@@ -1,0 +1,48 @@
+self signed certificate can be made by open ssl 
+
+command:
+----------
+
+To generate private key:
+--------------------------
+
+openssl genrsa -out privateKey11.key 2048   //YO can also use 1048 but 2048 is standard
+
+To generate public key:
+--------------------------
+
+penssl rsa -in privateKey11.key -pubout -out publickey11.key
+
+
+To generate csr:
+-----------------
+
+openssl req -new -key privateKey11.key -out public_privte.csr
+
+TO verify the generated csr:
+-----------------------------------
+
+openssl req -text -in public_privte.csr  -noout -verify
+
+self signing certificate:
+--------------------------
+
+openssl x509 -in public_privte.csr -out public_privte_signed.crt -req -signkey privateKey11.key -days 2
+
+DIffernce between self signed and CA Signed
+--------------------------------------------
+
+In Self SIgned:
+------------------
+
+1) In this u tell ur user to trust me 
+2) Self signed you need to install to ur local.
+3)In term od secure self sign provide same security as ca signed 
+4) ONly draw back few people only knows it
+
+CA Signed:
+-------
+
+1) In this u say ur users to trust CA authority
+2) CA signed is already know to ur browser
+

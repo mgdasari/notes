@@ -1,0 +1,33 @@
+Q) What is redis?
+>>Re ---- remote
+Di ----- Dictionary
+s ----- server
+
+Q) Few basic command ?
+----------------------
+
+set "name" "mukund" --- to store data.
+get "name"  --- to retrive data
+
+Q) Features of redis ?
+
+>> 1) It is no sql data (It dose not have structure like table and column and it does not use command like select insert.)
+2) If you want to store a data for specific period then redis is a best suit for that.
+3) It allow to store data in key value pair.
+4) You can get all command from the document.
+
+Q) Important Features of redis?
+
+>> Redis act as a in-memory db (IT store the data in memory not in disk which make it supper fast.)
+
+Q) Advantage of redis?
+
+>> 1)  It is  super fast
+2) It is simple and flexible 
+3) Best use case is data which needs to retrive faster are stored in memory and rest all in disk.
+4) Redis have master and slave replication features.
+5)  In master and slave ...One can be used as master which write only..Other is slave which is read only ... and one more is disked data ...
+
+Q) Why redis was used in ur project?
+
+>>>Redis was used to store a issued refresh and oauth token for 1 hour.

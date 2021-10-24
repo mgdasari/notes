@@ -16,3 +16,14 @@ HYDRA:
 https://www.ory.sh/hydra/docs/cli/hydra-migrate-sql
 
 8) In these confg file you will get all the details of teh APIs as well login logout consent apis.
+
+
+9) when url call is happen hydra create a login_challenge which is unique id whic it stores in mysql against that data.
+
+Code flow:
+-------------
+
+client-app:
+---------------
+
+1)  we have create page for login called as login.ejs created a form and called the url's from config on submit button.

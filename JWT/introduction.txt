@@ -1,0 +1,83 @@
+Q) What is JWT  token ?
+
+>> 
+1) JWT is a open standard RFC standard 7519. It securely transfer information between 2 bodies.
+2) JWT token is used for authentication and it is self contained information about the users.
+
+USes:
+-------
+1) authentication 
+2) Transfer information
+
+Structure:
+----------
+aaaaaaa.bbbbbbbb.cccccccc
+header.payload.signature
+
+Header: Header is formed by base 64 encoding of below json.
+-------
+
+{
+alg:algorithm like hmac sha 256 or rsa 
+type:type of token
+}
+
+payload: Payload is formed by base 64 encoding of below json
+---------
+
+{
+claims basically user details or meta data 
+}
+
+Reserverd claims:
+--------------------
+iss (issuer): Issuer of the JWT
+
+sub (subject): Subject of the JWT (the user)
+
+aud (audience): Recipient for which the JWT is intended
+
+exp (expiration time): Time after which the JWT expires
+
+nbf (not before time): Time before which the JWT must not be accepted for processing
+
+iat (issued at time): Time at which the JWT was issued; can be used to determine age of the JWT
+
+jti (JWT ID): Unique identifier; can be used to prevent the JWT from being replayed (allows a token to be used only once)
+
+Signature: HMAC SHA 256 OF HEADER AND PAYLOAD
+----------- 
+
+HMACSHA256(HADER+'.'+PAYLOAD),SECRET)
+
+
+Example:
+
+JWT Token:
+-----------
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.w2RTnDPj7gWRyr1UF2y49jEuV2iBLkdt_jKCxFnowtA
+
+
+header:
+----------
+
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+
+body:
+------
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "iat": 1516239022
+}
+
+signature:
+-------------
+HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),12345678900000000000
+)

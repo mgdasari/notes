@@ -1,0 +1,14 @@
+What is rabbitMQ?
+
+>> rabbitMQ is a queuing system.
+
+Why it was used ?
+>> 
+1) To store the data to remove the dependecy of the input file data. As it work on recieve and ack kind of flow.
+2) so whenever the server will be restarted it will start from where it is left but in case of file It will start processing all data again.
+
+what id durability in rabbitMQ?
+>>durability is nothing but even after the server restart the data will be there in queue.You need to set the durability flag as true.
+
+what is persistency in rabbitMQ?
+>> persistency is nothing but, if that flag is true data is stored in disk....But in our project the flag is set as false.

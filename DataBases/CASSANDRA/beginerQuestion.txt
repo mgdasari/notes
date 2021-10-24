@@ -1,0 +1,138 @@
+Q) what is apache cassandra?
+>>apache cassandra is free and open source nosql database used for managing large amountof data.Prociding high availibity with no single point of failure.
+
+Q) what are the feature of cassandra?
+>>1) Efficient write
+2) Ha 
+3) cassandra query language.
+4) easy data distribution.
+
+Q) different type of data model?
+
+>> conceptual data model
+logical data model
+physical data model.
+
+
+Q) what is dofference between cassandra and RDBMS?
+>>cassandra:
+-------------
+
+1) Master less (no single point of failure)
+2) ALways on continous availibity
+3) Supports dynamic,structured and unstructured data.
+4) Big data 
+
+
+RDBMS:
+------
+1) mASTER SLAVE REPLICATION 
+2) General REPLICATION with Master SLAVE
+3) support structred data.
+4)
+
+Q) what are four main element of database?
+>> 
+cluster
+keyspace
+column family
+cql table.
+
+Q) what is cqlsh?
+>> cqlsh is query language used to communicate with its database.
+
+It is used ti create schema
+insert data and update
+execute the query
+
+Q) what is yaml file in cassandra?
+>> If you want to change anything in database u need to do changes in yaml and take restart.
+
+Q) What  is cluster in cassandra?
+>>
+1) cluster is outermost structure in cassandra.
+2) cassandra assign data to node of cluster by arranging them in ring.
+3) Node hold replica of different range of data.
+
+Q) What are keyspace in cassandra?
+>>keyspace is outermost container in cassandra.keyspace is used to group a column families togeteher.
+
+Q) how to create keyspace in cassandra?
+>>create keyspace mukund with replication ={'class':'simpleStrategy','replication_factor':'3'}
+and durable_write='true'
+
+Q) what are durable writes?
+>>Durable write provide instruction to cassandra whether to use commitlog for update on the current keyspace or not.
+
+Q) What is replication factor?
+>>The replication factor refers to number of nodes that will act as a copies of data.
+
+Q) what do you mean by replication strategy ?
+
+>>
+1) replication strategy means how the replica are placed inside the node of the rings.
+2) replication strategy determine which node will get copies of which keys.
+
+There are 2 different type of strategy,
+
+1) simple strategy ---IT is used for development environment
+2) network topology strategy.-- It is used for production environment.
+
+
+Q) What is row in cassandra ? what are different element in it?
+
+>>1) A row is collection of column. 
+2) It is a small unit which stores a related data.
+
+The different element/part of row are.
+
+1) row key
+2) coulmn key
+3) column value.
+
+Q) What is primary key?
+
+>>The primary key is a key which is used to unique identify the row.
+
+There are 3 type of key;
+
+1) primary key
+2) compound primary key
+3) composite partioning key
+
+Q)What is primary key
+
+>>There is only single column as a primary key.The column is also called as partioning key.
+
+Q) what is compound primary key
+>>Here one key is partioning key and remaining other are clustering key.THe clustering key is used to sort data in partioning.
+
+Q) what  is composite partioning key
+>>It is use to create multiple partition for the data.
+
+Q) Difference between drop and truncate ?
+>> DRop is used to delete complete table and truncate is use to delete only data from a particular table.
+
+Q) How does cassandra perform write operation.
+
+>> 
+1) Whenever a write request comes it logs in commit logs then data will be captured and stored in mem-table.
+2) when mem-table is fulled the data is flushed to sstable 
+3) All write are automatically partitioned and replicated throughout the cluster.
+
+
+Q) explain the terms memetable,commitlog and sstable
+>>
+1) commit log-- The commit logs are like crash recovery mechanism that support cassandra to achieve future goals.
+2) mem-table -- mem table is in memory data structure that corresponds to CQL table.
+3) sstable --The content of mem table are flushed to files called as stables.
+
+Q) what is the use of coordinator nodes.
+>> Read operation are easy because client can connect to any nodes in a cluster. If a client connect to node and it does not have data it trying too read. Then that node is coordinator.
+
+Q) how dose read operation happens in cassandra
+>>
+
+Q) what do you mean by compaction.
+Q) explain nodetool util
+Q) 

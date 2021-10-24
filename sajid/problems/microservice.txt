@@ -1,0 +1,22 @@
+Need of microservice architechure?
+------------------------------------
+
+Monolithic:
+------------
+1) EArlier this architechure used to be followed.
+2) If any bug was founc whole code base needs to be deployed.
+3) And if there is cluster production environment then the code needs to be deployed in all the cluster.
+4) This lead to nightmare and very difficult job to manage.
+
+To overcome difficulties of Monolithic architechire microservice architechire came into picture.
+
+Microservice:
+----------------
+1) In this distributed system is involved.
+2) In these large code base is dictributed in to small services.
+3) small team can focus on small task and services.
+4) Every service is independent and communicate with each other.
+5****) The most important part is if you want to add/delete any services It can be easilt done in microservice.But very difficult to manage in Monolithic.
+6) We can add the main service behind the API gateway. In these we give URL to client.
+The client call these service,,api gateway in turn call actual bussines services.
+7) Maintainbility become easy.

@@ -1,0 +1,22 @@
+https://www.edureka.co/blog/interview-questions/cassandra-interview-questions/
+
+Q) what are the feature of nosql?
+
+>>1) IT does not require pre defined schema 
+2) A cluster of server can hold any large amount of data.
+3) ALlow easy scaling to adapt the data volume.
+
+Q) what are nosql databas?
+>>
+1)nosql means not only sql it means it support sql quiries alsoo.
+2) no sql support modeled data instead of tabular data.
+
+Q) what are different typeof nosql database.
+>>key value typed --- example redis and DynamoDB.
+column typed--CASSADRA AND HBASE
+document typed -- MONGODB AND COUGHDB
+graph typed--Neo4j and orientdb.
+
+Q)
+
+

@@ -1,0 +1,28 @@
+Q) What is jioSecureId?
+
+>> jioSecureId is unique identification of the users at jio.For this  need to onboard at jiosecureId backend.
+
+jioId made upoff: It is made up off last 4 digit of aadhaar and birthdate 
+
+Authentication happens using pin set on mobile and certificate stored in the mobile.
+
+Q) What is its use?
+>> It is one of the way used to authenticate the jio users.
+
+Q) FLOW
+
+>>1) clieck on login with jioId
+2) It will ask u for mobile number
+3) At backend it checks the mobile number already registered or not.
+4) If it is registered it will ask to tab on the images.
+5) It will take you to ess page.
+
+Q) How to register for jio id?
+
+>> You need to download an application and fill the details and aadhaar pic and you will get a jioId...
+
+
+Notes:
+---------
+
+1) Request module is used to Request to backend system.

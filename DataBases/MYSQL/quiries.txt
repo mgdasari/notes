@@ -56,3 +56,52 @@ Q) Write a query to fetch details of employees whose EmpLname ends with an alpha
 Q) Write a query to fetch details of all employees excluding the employees with first names, “Sanjay” and “Sonia” from the EmployeeInfo table.
 
 >>select * from employees where firstName not in ('sanjay','Sonia')
+
+Q) Write a query to fetch details of employees with the address as “DELHI(DEL)”.
+>> SELECT * FROM employeeInfo where address like 'delhi(del)';
+
+Q) Write a query to fetch all employees fname lname postion who also hold the managerial position.
+
+>>SELECT e.emplFname,e.emplLname,p.position from employeeInfo e inner joins employeePostion p on e.emplId=p.emplId and p.position in ('manager')
+
+Q) Write a query to fetch the department-wise count of employees sorted by department’s count in ascending order.
+
+>>SELECT COUNT (Department),Department FROM EmployeeInfo OrderBy count(department) as asc
+
+Q) Write a query to calculate the even and odd records from a table.
+>> 
+even:
+-------
+
+SELECT * FROM EmployeeInfo WHERE ID IN (SELECT ID FROM EmployeeInfo WHERE ID%2 = 0 )
+
+ODD:
+----
+
+SELECT * FROM EmployeeInfo WHERE ID IN (SELECT ID FROM EmployeeInfo WHERE ID%2 <> 0 )
+
+Q) Write a query to find the Nth highest salary from the table without using TOP/limit keyword.
+
+>> SELECT ID,name FROM EmployeeInfo e1 WHER n-1 = (select count distinct (salary) from employeePostion p1  where p1.salary > e1.salary) 
+
+Q) Write a query to retrieve duplicate records from a table.
+
+>> select emplFname,emplLname,department from employeeInfo group by emplFname,emplLname,department having count(*) >1
+
+Q) Write a query to find the third-highest salary from the EmpPosition table.
+
+>>SELECT ID,name FROM EmployeeInfo E1 WHERE N-1= (SELECT COUNT distinct(salary) FROM employeePostion P1 WHERE P1.salary>E1.salary)
+
+Q) Write a query to display the first and the last record from the EmployeeInfo table.
+
+>>MIN: SELECT * FROM EmployeeInfo WHERE emplId=(SELECT MIN(emplId) FROM EmployeeInfo)
+MAX: SELECT * FROM EmployeeInfo WHERE emplId=(SELECT MAX(emplId) FROM EmployeeInfo)
+
+Q) Write a query to retrieve Departments who have less than 2 employees working in it.
+>>SELECT Department,COUNT(emplId) FROM EmployeeInfo GROUP BY Department having COUNT (emplId) < 2
+
+Q) Write a query to retrieve EmpPostion along with total salaries paid for each of them.
+>>SELECT EmpPosition,SUM(salary) FROM employeeInfo group by EmpPosition.
+
+q) Write a query to fetch 50% records from the EmployeeInfo table.
+>> selct * from employeeInfo where emplId=(select count(emp/2) from employeeInfo)

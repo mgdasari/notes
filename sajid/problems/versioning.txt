@@ -1,0 +1,8 @@
+
+MAJOR.MINOR.PATCH is the way of versioning needs to be done.
+
+1.0.0 
+
+if you providing small fix then 1.0.1
+if providing fix hich contain new functionality then 1.1.0
+if you are adding completely new features then 2.0.0
