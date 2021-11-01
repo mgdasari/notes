@@ -1,0 +1,81 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: anonymousotpsend
+  namespace: idam
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anonymousotpsend
+  template:
+    metadata:
+      labels:
+        app: anonymousotpsend
+        version: v1
+    spec:
+      containers:
+        -
+          image: "nexuscoe.rjil.ril.com:5004/anonymousotpsend:latest"
+          imagePullPolicy: Always
+          name: anonymousotpsend
+          ports:
+            -
+              containerPort: 9035
+              name: port9035
+          volumeMounts:
+            -
+              mountPath: /opt/idamv2/IDAM/configs
+              name: telcoidamconfig-volume
+            -
+              mountPath: /opt/idamv2/IDAM/keys
+              name: telcoidamkeys-volume
+            -
+              mountPath: /opt/idamv2/logs
+              name: telcoidam-storage
+          resources:
+              limits:
+                cpu: 200m
+                memory: 500Mi
+              requests:
+                cpu: 100m
+                memory: 250Mi
+
+
+
+      imagePullSecrets:
+        -
+          name: idam-nexus-registry
+      volumes:
+        -
+          configMap:
+            name: telcoidamconfig
+          name: telcoidamconfig-volume        
+        -
+          configMap:
+            name: telcoidamkeys
+          name: telcoidamkeys-volume
+
+        -
+          name: telcoidam-storage
+          persistentVolumeClaim:
+            claimName: telcoidam-pv-claim
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: anonymousotpsend
+  namespace: idam
+  labels:
+    app: anonymousotpsend
+spec:
+  type: NodePort
+  ports:
+    - port: 9035
+      targetPort: 9035
+      nodePort: 30904
+      name: http
+  selector:
+    app: anonymousotpsend

@@ -1,0 +1,148 @@
+what are limitation of VMs?
+
+>>
+
+https://www.aquasec.com/cloud-native-academy/docker-container/docker-containers-vs-virtual-machines/
+
+vms:
+----
+1) Require infra
+2) host os 
+3) hypervisor (vmware virtual tool box)
+4) guest OS
+5) bin/lib
+6) app1
+
+Each guest os required minimum 700 mb + cpu to run but there might be chance where application do not require that much resources.So there will be lot of wastage of resources.
+VM take minutes of time to get started.
+
+Docker:
+-------
+1) Require infra
+2) host os 
+3) docker engine (docker daemon)
+4) bin/lib
+5) app1
+
+Docker engine shares the resource amonges the images/containers
+impages tage quite less time to run compare to vms.
+
+Now vm and dockers have there own use cases.
+
+Give example for tours (own house and rented houses.)
+
+VM is use when you want a application system as a isolated systems.
+docker is used when you want a services to be isolated from each others.
+
+
+What is docker?
+---------------
+
+Docker is an open platform for developing, shipping, and running applications.
+
+Explanation:
+------------
+1) Devleoper claiming that app working in local but noot in the other system docker solves this issue.
+2) How it solve 
+
+1) U create docker images from .docker file
+2) when u run this image this image a container is created basically application become running.
+
+Now here there is need to manages this container
+----------------------------------------------------
+
+If i need to have replica, deployments,services then i need container management system called a docker swarm or kubernetes.
+
+****) Difference:
+
+Kubernetes focuses on open-source and modular orchestration, offering an efficient container orchestration solution for high-demand applications with complex configuration.
+Docker Swarm emphasizes ease of use, making it most suitable for simple applications that are quick to deploy and easy to manage.
+
+
+what is kubernetes?
+-------------------
+
+Kubernetes are used for container managements.we create pods in it.It have master and cluster node architecture.
+
+
+***) Small demo for creating image and pods.
+1) docker images
+2) yaml files
+3) cm
+4) pv pvc
+5) adding resources
+
+
+***) Explaining architechure diagram
+
+***) resource allocation admin people ask for resource utilization for having the servers for docker k8s set up.
+
+cpu-2 core
+disk--40 gb
+
+instance 38
+
+per instance ram -- 15gb/38 instance --390 MB
+per instance cpu --2000 milli core/38 instances --52 milli-core
+
+tps ---20 tps
+
+**) Approaches deployments:
+-----------------------------------
+
+Deploy one service test it and take to prod---
+
+
+HA system
+--------------------
+
+with existing step up and docker setp with f5 as lb.
+
+***) Now to support this much 20-25 tps we use 38 instances 
+Incase of kubernetes after testing only we will get how manger node cluster will require for this much instances.
+
+
+Point of contact:
+------------------
+
+1) CICD(alisha p)
+2) server/architechure (vivek n)
+3) TopinfrakubernetesTeam
+
+
+
+common used commands:
+--------------
+
+1) docker build -f -t imageName:v1
+2) docker run image id
+3) kubectl get pods
+4) kubectl get pods unpwverify-75c94774df-rst7f -w
+5) kubectl logs podId
+6) kubectl get deployments
+7) kubectl get svc
+8) kubectl -n idam rollout restart deploy
+9) kubectl exec -it anonymousotpsend-69556dcfd8-t7ccs /bin/sh
+10) time docker build -f ./dockerFiles/telcoremoveapplication.Dockerfile -t telcoremoveapplication6091:v1 .
+11) docker tag mukund_demo_v1:v1 nexuscoe.rjil.ril.com:5004/mukund_demo_v1:v1
+12) docker push nexuscoe.rjil.ril.com:5004/mukund_demo_v1:v1
+13) curl -X POST    http://10.144.96.153:30941/dip/user/unpw/verify     -H 'cache-control: no-cache'    -H 'content-type: application/json' -H 'app-name:RJIL_JioTv' -d '{
+    "identifier":"power1",
+    "password":"fuLlYp0w3rFUlL@ppu$er",
+    "upgradeAuth":"Y"
+ }'
+
+
+
+#####################################
+
+
+ ---> Running in f36be217d944
+Removing intermediate container f36be217d944
+ ---> 7f23158eb62f
+Successfully built 7f23158eb62f
+Successfully tagged mukund_demo_v1:v1
+
+real    1m47.624s
+user    0m3.278s
+sys     0m4.418s
